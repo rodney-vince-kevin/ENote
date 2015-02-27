@@ -7,7 +7,7 @@
   <ion-content class="padding">
 		<ul class="list">
 			<li class="item" ng-repeat="e in expense | orderBy:'-created_at' track by $index ">
-				<h2 class="item-title">P {{e.amount}}</h2>
+				<h2 class="item-title">{{e.amount | currency:'P':0}}</h2>
 				<p>{{e.name}}</p>
 				 <span class="item-note" am-time-ago="e.created_at"></span>
 			</li>
