@@ -1,0 +1,12 @@
+<ion-view view-title="Income">
+	<ion-nav-buttons side="right">
+		<a class="button button-postive button-clear" href="#/tab/income/new">
+			<i class="icon ion-compose"></i>
+		</a>
+	</ion-nav-buttons>
+	<ion-content>
+		<ul class="list">
+			<li class="item" data-ng-repeat="list in lists">{{list.description}} <span class="badge" ng-class="{ 'badge-balanced': isIncome(list), 'badge-assertive' : !isIncome(list) }">$ {{list.amount}}</span></li>
+		</ul>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,17 @@
+<ion-view view-title="Expense New">
+	<ion-content>
+		<form ng-submit="addExpense()">
+		<div class="list">
+			<label class="item item-input">
+				<span class="input-label">Name</span>
+				<input ng-model="expense.name" type="text" required>
+			</label>
+			<label class="item item-input">
+				<span class="input-label">Amount</span>
+				<input ng-model="expense.amount" type="number" required>
+			</label>
+		</div>
+		<button type="submit" class="button button-positive button-full">Add</button>
+	</form>
+	</ion-content>
+</ion-view>

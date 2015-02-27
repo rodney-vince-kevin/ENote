@@ -1,0 +1,22 @@
+<ion-view view-title="Income New">
+	<ion-content>
+		<form ng-submit="new.submit()">
+			<div class="list">
+				<label class="item item-input">
+					<span class="input-label">Name</span>
+					<input ng-model="new.name" type="text" required>
+				</label>
+				<label class="item item-input">
+					<span class="input-label">Amount</span>
+					<input ng-model="new.amount" type="number" required>
+				</label>
+				<label class="item item-input item-select">
+					<span class="input-label">Category</span>
+					<select ng-model="new.category" ng-options="key as value.name group by value.isIncome ? 'Income' : 'Expense' for (key,value) in categories">
+					</select>				
+				</label>
+			</div>
+			<button type="submit" class="button button-positive button-full">Add</button>
+		</form>
+	</ion-content>
+</ion-view>
